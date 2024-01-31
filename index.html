@@ -181,19 +181,29 @@
 
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="name" />
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Pesan</label>
-              <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary">Kirim</button>
+            <form name="portofolio-contact">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="name" name="nama" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" rows="3" name="pesan"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -214,5 +224,34 @@
     <!-- footer end -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwU5U24cl8Bq_csW1nTJcjE9zGm_R7A1X_sFQkTB5x26tCxYzFAkn3UvGQnTBSNSuir/exec";
+      const form = document.forms["portofolio-contact"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle(".d-none");
+        btnKirim.classList.toggle(".d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle(".d-none");
+            btnKirim.classList.toggle(".d-none");
+            // tampilkan alert
+            myAlert.classList.toggle(".d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
