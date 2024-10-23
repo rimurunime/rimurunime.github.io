@@ -1,3 +1,10 @@
+/* variabel
+warna kuning : #facc15 (kondisi awal), #eab308 (kondisi hover);
+warna dark/gelap : #1e293b (warna navbar), #334155 (warna body)
+warna putih/terang : #eaeaea, 
+warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (warna tanggal rilis); */
+
+
 /* css reset */
 html, body, * {
     margin: 0;
@@ -214,8 +221,41 @@ hr {
     margin: 3px;
 }
 
+/* pagination */
+.ul-pagination {
+    display: flex;
+    justify-content: center;
+    color: #eaeaea;
+}
+
+.li-pagination {
+    background-color: #1e293b;
+    margin: 5px;
+    padding: 4px 8px;
+    list-style-type: none;
+}
+
+.ul-pagination a {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.li-pagination:hover {
+    background-color: #0f172a;
+}
+
+.active-page {
+    background-color: #facc15;
+}
+
+.active-page a {
+    color: black;
+}
 
 
+.active-page:hover {
+    background-color: #eab308;
+}
 
 
 
