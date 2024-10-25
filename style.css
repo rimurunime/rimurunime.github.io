@@ -4,6 +4,21 @@ warna dark/gelap : #1e293b (warna navbar), #334155 (warna body)
 warna putih/terang : #eaeaea, 
 warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (warna tanggal rilis); */
 
+/* variabel css */
+:root {
+    --color-black: black; /*warna hitam basic*/
+    --color-dark-1: #1e293b; /*warna navbar*/
+    --color-dark-2: #334155; /*warna body*/
+    --hover-dark-3: #0f172a; /*hover pagination*/
+    --color-yellow-1: #facc15; /*warna kuning kondisi awal*/
+    --hover-yellow-2: #eab308; /*warna kuning kondisi hover*/
+    --color-white-1: #eaeaea;
+    --color-white-2: #cbd5e1; /*warna tulisan chapter*/
+    --color-white3: #94a3b8; /*warna tanggal rilis*/
+    --color-indigo-1: #4f46e5; /*tipe komik manhwa*/
+}
+
+
 
 /* css reset */
 html, body, * {
@@ -25,7 +40,8 @@ body {
 /* navbar */
 nav {
     display: flex;
-    background-color: #1e293b;
+    /* background-color: #1e293b; */
+    background-color: var(--color-dark-1);
     justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -38,7 +54,8 @@ nav h2 a {
 }
 
 .btn-nav {
-    background-color: #facc15;
+    /* background-color: #facc15; */
+    background-color: var(--color-yellow-1);
     padding: 8px 16px;
     cursor: pointer;
     border: none;
@@ -53,20 +70,23 @@ nav h2 a {
 .dropdown {
     display: none;
     position: absolute;
-    background-color: #facc15;
+    /* background-color: #facc15; */
+    background-color: var(--color-yellow-1);
     min-width: 98px;
     box-shadow: 0 5px 5px #1e293b;
 }
 
 .dropdown a {
     display: block;
-    color: black;
+    /* color: black; */
+    color: var(--color-black);
     text-decoration: none;
     padding: 4px 6px;
 }
 
 .dropdown a:hover {
-    background-color: #eab308;
+    /* background-color: #eab308; */
+    background-color: var(--hover-yellow-2);
 }
 
 .dropdown-container:hover .dropdown {
@@ -74,7 +94,8 @@ nav h2 a {
 }
 
 .dropdown-container:hover .btn-nav{
-    background-color: #eab308;
+    /* background-color: #eab308; */
+    background-color: var(--hover-yellow-2);
 }
 
 /* new update */
@@ -102,7 +123,8 @@ nav h2 a {
 
 .card-content {
     padding: 0px;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
     text-transform: capitalize;
 }
 
@@ -124,7 +146,8 @@ nav h2 a {
 
 .komik-type {
     position: absolute;
-    background-color: #4f46e5;
+    /* background-color: #4f46e5; */
+    background-color: var(--color-indigo-1);
     color: white;
     padding: 5px 10px;
     font-size: 12px;
@@ -142,14 +165,16 @@ nav h2 a {
 
 .title-new-update {
     text-align: center;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
 .chapter-date p:first-of-type {
-    color: #cbd5e1;
+    /* color: #cbd5e1; */
+    color: var(--color-white-2);
     font-size: 12px;
     font-weight: bold;
     margin-right: 5px;
@@ -162,7 +187,7 @@ nav h2 a {
 
 hr {
     border: none;
-    border-top: 5px solid #eaeaea;
+    border-top: 5px solid var(--color-white-1);
     width: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -177,7 +202,8 @@ hr {
 .gallery-container .title-gallery {
     text-align: center;
     padding-bottom: 10px;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
 }
 
 .gallery {
@@ -205,7 +231,8 @@ hr {
 
 .gallery-item h2 {
     margin: 10px 0;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
 }
 
 .gallery-item .info {
@@ -229,7 +256,8 @@ hr {
 }
 
 .li-pagination {
-    background-color: #1e293b;
+    /* background-color: #1e293b; */
+    background-color: var(--color-dark-1);
     margin: 5px;
     padding: 4px 8px;
     list-style-type: none;
@@ -241,35 +269,41 @@ hr {
 }
 
 .li-pagination:hover {
-    background-color: #0f172a;
+    /* background-color: #0f172a; */
+    background-color: var(--hover-dark-3);
 }
 
 .active-page {
-    background-color: #facc15;
+    /* background-color: #facc15; */
+    background-color: var(--color-yellow-1);
 }
 
 .active-page a {
-    color: black;
+    /* color: black; */
+    color: var(--color-black);
 }
 
 
 .active-page:hover {
-    background-color: #eab308;
+    /* background-color: #eab308; */
+    background-color: var(--hover-yellow-2);
 }
 
 
 /* series popular */
 .popular-container {
-    background-color: #1e293b;
+    /* background-color: #1e293b; */
+    background-color: var(--color-dark-1);
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 70px auto;
     padding: 20px;
     border-radius: 10px;
 }
 
 .popular-container h2 {
     text-align: center;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
     padding-bottom: 10px;
 }
 
@@ -282,12 +316,13 @@ hr {
     display: flex;
     justify-content: start;
     gap: 10px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--color-white-1);
     padding: 20px;
 }
 
 .ranking-popular {
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
     font-size: 20px;
     font-weight: bold;
     width: 30px;
@@ -305,13 +340,46 @@ hr {
 }
 
 .info-popular p {
-    color: #cbd5e1;
+    /* color: #cbd5e1; */
+    color: var(--color-white-2);
 }
 
 .left-popular, .right-popular {
     padding: 20px;
     width: 575px;
 }
+
+/* footer */
+footer {
+    width: 100%;
+    /* background-color: #1e293b; */
+    background-color: var(--color-dark-1);
+    /* color: #eaeaea; */
+    color: var(--color-white-1);
+    text-align: center;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.theme-switch {
+    /* background-color: var(); */
+    background-image: linear-gradient(to right, black, white);
+    padding: 8px 12px;
+    border: none;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.theme-switch:hover {
+    background-image: linear-gradient(to right, white, black);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.light-mode {
+    --color-dark-1: white;
+}
+
 
 
 
