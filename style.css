@@ -7,17 +7,24 @@ warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (w
 /* variabel css */
 :root {
     --color-black: black; /*warna hitam basic*/
-    --color-dark-1: #1e293b; /*warna navbar*/
-    --color-dark-2: #334155; /*warna body*/
-    --hover-dark-3: #0f172a; /*hover pagination*/
-    --color-yellow-1: #facc15; /*warna kuning kondisi awal*/
-    --hover-yellow-2: #eab308; /*warna kuning kondisi hover*/
-    --color-white-1: #eaeaea;
-    --color-white-2: #cbd5e1; /*warna tulisan chapter*/
-    --color-white3: #94a3b8; /*warna tanggal rilis*/
+    --nav-bg: #1e293b; /*warna navbar*/
+    --pagination-bg: #1e293b;
+    --body-bg: #334155; /*warna body*/
+    --page-hover: #0f172a; /*hover pagination*/
+    --btn-bg: #facc15; /*warna kuning kondisi awal*/
+    --btn-hover: #eab308; /*warna kuning kondisi hover*/
+    --color-1: #eaeaea;
+    --color-2: #cbd5e1; /*warna tulisan chapter*/
+    --color-3: #94a3b8; /*warna tanggal rilis*/
     --color-indigo-1: #4f46e5; /*tipe komik manhwa*/
+    --color-pagination: #eaeaea;
+    --color-popular: #eaeaea;
+    --color-popular-2: #dcdcdc;
+    --color-hr-popular: #eaeaea;
+    --color-footer: #eaeaea;
+    --bg-scroll-to-top: #1e293b;
+    --color-scroll-to-top: #eaeaea;
 }
-
 
 
 /* css reset */
@@ -28,7 +35,8 @@ html, body, * {
 }
 
 body {
-    background-color: #334155;
+    background-color: var(--body-bg);
+    /* background-color: #dcdcdc; */
     font-family: Inter, Arial;
 }
 
@@ -41,7 +49,7 @@ body {
 nav {
     display: flex;
     /* background-color: #1e293b; */
-    background-color: var(--color-dark-1);
+    background-color: var(--nav-bg);
     justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -55,7 +63,7 @@ nav h2 a {
 
 .btn-nav {
     /* background-color: #facc15; */
-    background-color: var(--color-yellow-1);
+    background-color: var(--btn-bg);
     padding: 8px 16px;
     cursor: pointer;
     border: none;
@@ -71,7 +79,7 @@ nav h2 a {
     display: none;
     position: absolute;
     /* background-color: #facc15; */
-    background-color: var(--color-yellow-1);
+    background-color: var(--btn-bg);
     min-width: 98px;
     box-shadow: 0 5px 5px #1e293b;
 }
@@ -86,7 +94,7 @@ nav h2 a {
 
 .dropdown a:hover {
     /* background-color: #eab308; */
-    background-color: var(--hover-yellow-2);
+    background-color: var(--btn-hover);
 }
 
 .dropdown-container:hover .dropdown {
@@ -95,7 +103,7 @@ nav h2 a {
 
 .dropdown-container:hover .btn-nav{
     /* background-color: #eab308; */
-    background-color: var(--hover-yellow-2);
+    background-color: var(--btn-hover);
 }
 
 /* new update */
@@ -124,7 +132,7 @@ nav h2 a {
 .card-content {
     padding: 0px;
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-1);
     text-transform: capitalize;
 }
 
@@ -166,7 +174,7 @@ nav h2 a {
 .title-new-update {
     text-align: center;
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-1);
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -174,7 +182,7 @@ nav h2 a {
 
 .chapter-date p:first-of-type {
     /* color: #cbd5e1; */
-    color: var(--color-white-2);
+    color: var(--color-2);
     font-size: 12px;
     font-weight: bold;
     margin-right: 5px;
@@ -187,7 +195,7 @@ nav h2 a {
 
 hr {
     border: none;
-    border-top: 5px solid var(--color-white-1);
+    border-top: 5px solid var(--color-1);
     width: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -203,7 +211,7 @@ hr {
     text-align: center;
     padding-bottom: 10px;
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-1);
 }
 
 .gallery {
@@ -232,14 +240,15 @@ hr {
 .gallery-item h2 {
     margin: 10px 0;
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-1);
 }
 
 .gallery-item .info {
     text-align: left;
     padding: 5px;
     padding-top: 0;
-    color: #cbd5e1;
+    /* color: #cbd5e1; */
+    color: var(--color-2);
     font-size: 12px;
     font-weight: bold;
 }
@@ -252,30 +261,34 @@ hr {
 .ul-pagination {
     display: flex;
     justify-content: center;
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-1);
 }
 
 .li-pagination {
     /* background-color: #1e293b; */
-    background-color: var(--color-dark-1);
+    /* display: inline-block; */
+    background-color: var(--pagination-bg);
     margin: 5px;
     padding: 4px 8px;
     list-style-type: none;
 }
 
 .ul-pagination a {
-    color: #eaeaea;
+    /* color: #eaeaea; */
+    color: var(--color-pagination);
+    padding: 4px 4px;
     text-decoration: none;
 }
 
 .li-pagination:hover {
     /* background-color: #0f172a; */
-    background-color: var(--hover-dark-3);
+    background-color: var(--page-hover);
 }
 
 .active-page {
     /* background-color: #facc15; */
-    background-color: var(--color-yellow-1);
+    background-color: var(--btn-bg);
 }
 
 .active-page a {
@@ -286,14 +299,14 @@ hr {
 
 .active-page:hover {
     /* background-color: #eab308; */
-    background-color: var(--hover-yellow-2);
+    background-color: var(--btn-hover);
 }
 
 
 /* series popular */
 .popular-container {
     /* background-color: #1e293b; */
-    background-color: var(--color-dark-1);
+    background-color: var(--nav-bg);
     max-width: 1200px;
     margin: 70px auto;
     padding: 20px;
@@ -303,8 +316,12 @@ hr {
 .popular-container h2 {
     text-align: center;
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-popular);
     padding-bottom: 10px;
+}
+
+.popular-container hr {
+    border-color: var(--color-hr-popular);
 }
 
 .popular-grid {
@@ -316,13 +333,13 @@ hr {
     display: flex;
     justify-content: start;
     gap: 10px;
-    border-bottom: 1px solid var(--color-white-1);
+    border-bottom: 1px solid var(--color-popular);
     padding: 20px;
 }
 
 .ranking-popular {
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-popular);
     font-size: 20px;
     font-weight: bold;
     width: 30px;
@@ -341,7 +358,7 @@ hr {
 
 .info-popular p {
     /* color: #cbd5e1; */
-    color: var(--color-white-2);
+    color: var(--color-popular-2);
 }
 
 .left-popular, .right-popular {
@@ -353,9 +370,9 @@ hr {
 footer {
     width: 100%;
     /* background-color: #1e293b; */
-    background-color: var(--color-dark-1);
+    background-color: var(--nav-bg);
     /* color: #eaeaea; */
-    color: var(--color-white-1);
+    color: var(--color-footer);
     text-align: center;
     padding: 15px;
     text-transform: capitalize;
@@ -376,9 +393,41 @@ footer {
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
-.light-mode {
-    --color-dark-1: white;
+/* scroll to top */
+#scrollToTopId {
+    position: fixed;
+    right: 25px;
+    bottom: 60px;
+    background-color: var(--bg-scroll-to-top);
+    width: 40px;
+    height: 40px;
+    color: var(--color-scroll-to-top);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    /* display: none; */
 }
+
+#scrollToTopId:hover {
+    background-color: var(--page-hover);
+}
+
+/* light mode */
+.light-mode {
+    --nav-bg: #64748b;
+    --body-bg: #eaeaea;
+    --pagination-bg: #64748b;
+    --page-hover: #475569;
+    --btn-bg: #facc15;
+    --btn-hover: #eab308;
+    --color-1: #1e293b;
+    --color-2: #0f172a;
+    --color-3: #334155;
+    --bg-scroll-to-top: #64748b;
+    --color-scroll-to-top: #eaeaea;
+}
+
+
 
 
 
@@ -425,5 +474,9 @@ footer {
     .left-popular, .right-popular {
         width: 100%;
         padding: 0;
+    }
+
+    #scrollToTopId {
+        right: 10px;
     }
 }

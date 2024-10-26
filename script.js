@@ -1,3 +1,4 @@
+// dark mode & light mode
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('theme-switch');
     const body = document.body;
@@ -23,3 +24,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// scroll to top
+const scrollToTop = document.getElementById('scrollToTopId');
+
+document.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY  || document.documentElement.scrollTop;
+
+    if(scrollPosition > 200) {
+        scrollToTopId.style.display = 'block';
+    } else {
+        scrollToTopId.style.display = 'none';
+    }
+
+    console.log(scrollPosition);
+})
+
+document.addEventListener('DOMContentLoaded',function() {
+    scrollToTopId.style.display = 'none';
+})
+
+function scrollToTopClick() {
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+};
+
