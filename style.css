@@ -380,16 +380,23 @@ footer {
 
 .theme-switch {
     /* background-color: var(); */
-    background-image: linear-gradient(to right, black, white);
-    padding: 8px 12px;
+    /* background-image: linear-gradient(to right, black, white); */
+    /* background-color: white; */
+    background-color: transparent;
+    padding: 6px 6px;
     border: none;
     text-shadow: -1px 1px 1px rgba(255, 255, 255, 0.3);
     margin-left: 5px;
     cursor: pointer;
+    color: #facc15;
+    font-size: 18px;
+    border-radius: 50%;
 }
 
 .theme-switch:hover {
-    background-image: linear-gradient(to right, white, black);
+    /* background-image: linear-gradient(to right, white, black); */
+    /* background-color: white; */
+    color: #eab308;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
