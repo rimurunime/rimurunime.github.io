@@ -119,14 +119,16 @@ nav h2 a {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 8px;
     width: 200px;
     text-align: left;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .card-content {
@@ -219,6 +221,10 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 40px;
+}
+
+.gallery-wrapper {
+    position: relative;
 }
 
 .gallery-item {

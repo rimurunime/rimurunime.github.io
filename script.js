@@ -1,4 +1,4 @@
-// dark mode & light mode
+// dark mode & light mode with text
 // document.addEventListener('DOMContentLoaded', function() {
 //     const toggleButton = document.getElementById('theme-switch');
 //     const body = document.body;
