@@ -6,17 +6,26 @@ warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (w
 
 /* variabel css */
 :root {
-    --color-black: black; /*warna hitam basic*/
-    --nav-bg: #1e293b; /*warna navbar*/
+    --color-black: black;
+    /*warna hitam basic*/
+    --nav-bg: #1e293b;
+    /*warna navbar*/
     --pagination-bg: #1e293b;
-    --body-bg: #334155; /*warna body*/
-    --page-hover: #0f172a; /*hover pagination*/
-    --btn-bg: #facc15; /*warna kuning kondisi awal*/
-    --btn-hover: #eab308; /*warna kuning kondisi hover*/
+    --body-bg: #334155;
+    /*warna body*/
+    --page-hover: #0f172a;
+    /*hover pagination*/
+    --btn-bg: #facc15;
+    /*warna kuning kondisi awal*/
+    --btn-hover: #eab308;
+    /*warna kuning kondisi hover*/
     --color-1: #eaeaea;
-    --color-2: #cbd5e1; /*warna tulisan chapter*/
-    --color-3: #94a3b8; /*warna tanggal rilis*/
-    --color-indigo-1: #4f46e5; /*tipe komik manhwa*/
+    --color-2: #cbd5e1;
+    /*warna tulisan chapter*/
+    --color-3: #94a3b8;
+    /*warna tanggal rilis*/
+    --color-indigo-1: #4f46e5;
+    /*tipe komik manhwa*/
     --color-pagination: #eaeaea;
     --color-popular: #eaeaea;
     --color-popular-2: #dcdcdc;
@@ -28,7 +37,9 @@ warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (w
 
 
 /* css reset */
-html, body, * {
+html,
+body,
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -101,7 +112,7 @@ nav h2 a {
     display: block;
 }
 
-.dropdown-container:hover .btn-nav{
+.dropdown-container:hover .btn-nav {
     /* background-color: #eab308; */
     background-color: var(--btn-hover);
 }
@@ -129,6 +140,12 @@ nav h2 a {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.1);
 }
 
 .card-content {
@@ -367,7 +384,8 @@ hr {
     color: var(--color-popular-2);
 }
 
-.left-popular, .right-popular {
+.left-popular,
+.right-popular {
     padding: 20px;
     width: 575px;
 }
@@ -440,6 +458,182 @@ footer {
     --color-scroll-to-top: #eaeaea;
 }
 
+/* description home */
+.container-description {
+    /* background-color: var(--nav-bg); */
+    /* background-color: red; */
+    color: #eaeaea;
+    margin: 50px auto;
+    width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-description h2 {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.description {
+    /* width: 400px; */
+}
+
+.tab-button {
+    background-color: var(--btn-bg);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+.tab-button.active {
+    background-color: var(--btn-hover);
+}
+
+.info-description {
+    background-color: var(--nav-bg);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+.synopsis-description {
+    background-color: var(--nav-bg);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+
+.info-description p {
+    margin: 10px 0;
+}
+
+
+.content-description {
+    display: flex;
+    gap: 20px;
+}
+
+.img-description img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* chapter list */
+.chapter-container {
+    background-color: var(--nav-bg);
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.social-button {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.social-button button {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.discord {
+    background-color: #5964f2;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+.facebook:hover {
+    background-color: #2B446A; /* Perkiraan 10% lebih gelap dari #3b5998 */
+}
+
+.twitter:hover {
+    background-color: #1596E2; /* Perkiraan 10% lebih gelap dari #1da1f2 */
+}
+
+.discord:hover {
+    background-color: #4B54D2; /* Perkiraan 10% lebih gelap dari #5964f2 */
+}
+
+.telegram:hover {
+    background-color: #0077AA; /* Perkiraan 10% lebih gelap dari #0088cc */
+}
+
+.search-chapter {
+    width: 100%;
+    /* padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px; */
+
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.search-chapter:focus {
+    /* background-color: red; */
+    border: none;
+    outline: none;
+}
+
+.chapter-list {
+    max-height: 230px; /* Adjust height for 5 chapters */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chapter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: var(--nav-bg);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    color: #eaeaea;
+}
+
+.chapter-item:last-child {
+    margin-bottom: 0;
+}
 
 
 
@@ -456,7 +650,7 @@ footer {
 
     .card {
         width: 150px;
-        
+
     }
 
     .card-content h2 {
@@ -484,7 +678,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .left-popular, .right-popular {
+    .left-popular,
+    .right-popular {
         width: 100%;
         padding: 0;
     }

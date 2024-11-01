@@ -81,3 +81,58 @@ function scrollToTopClick() {
     window.scrollTo({ top: 0, behavior: 'smooth'});
 };
 
+// 
+// function showInfo() {
+//     document.getElementById('info-description').classList.add('active');
+//     document.getElementById('synopsis-description').classList.remove('active');
+//     document.querySelector('.tab-button .active').classList.remove('active');
+//     document.querySelectorAll('.tab-button')[0].classList.add('active');
+// }
+
+// function showSynopsis() {
+//     document.getElementById('synopsis-description').classList.add('active');
+//     document.getElementById('info-description').classList.remove('active');
+//     document.querySelector('.tab-button .active').classList.remove('active');
+//     document.querySelectorAll('.tab-button')[1].classList.add('active');
+// }
+
+function showInfo() {
+    document.getElementById('info-description').classList.add('active');
+    document.getElementById('synopsis-description').classList.remove('active');
+
+    // Hapus kelas 'active' dari tombol aktif sebelumnya
+    document.querySelector('.tab-button.active').classList.remove('active');
+
+    // Tambahkan kelas 'active' pada tombol Info
+    document.querySelectorAll('.tab-button')[0].classList.add('active');
+}
+
+function showSynopsis() {
+    document.getElementById('synopsis-description').classList.add('active');
+    document.getElementById('info-description').classList.remove('active');
+
+    // Hapus kelas 'active' dari tombol aktif sebelumnya
+    document.querySelector('.tab-button.active').classList.remove('active');
+
+    // Tambahkan kelas 'active' pada tombol Sinopsis
+    document.querySelectorAll('.tab-button')[1].classList.add('active');
+}
+
+// search chapter
+// Select the search input and add an event listener
+document.getElementById("chapterSearch").addEventListener("input", function() {
+    const searchValue = this.value.toLowerCase();
+    const chapters = document.querySelectorAll(".chapter-list .chapter-item");
+
+    chapters.forEach(chapter => {
+        const chapterText = chapter.querySelector("span").textContent.toLowerCase();
+        if (chapterText.includes(searchValue)) {
+            chapter.style.display = "flex"; // Ensure it displays in 'flex' mode to keep the layout
+        } else {
+            chapter.style.display = "none";
+        }
+    });
+});
+
+
+

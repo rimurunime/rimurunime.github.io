@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project A</title>
+    <link rel="stylesheet" href="/assets/icon/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <h2><a href="#">Project A</a></h2>
+
+        <div>
+            <div class="dropdown-container">
+                <button class="btn-nav">Main Menu</button>
+                <div class="dropdown">
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <a href="">Treasure</a>
+                </div>
+            </div>
+            <button id="theme-switch" class="theme-switch"><i class="fa-solid fa-sun"></i></button>
+        </div>
+
+    </nav>
+    <!-- navbar end -->
+
+    <!-- scroll to top -->
+    <button id="scrollToTopId" onclick="scrollToTopClick()">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <!-- scroll to top end -->
+
+    <!-- description -->
+    <div class="container-description">
+        <h2>Transcension Academy</h2>
+        <div class="content-description">
+            <div class="img-description">
+                <img src="/assets/img/8.jpg" alt="transcension-academy">
+            </div>
+        
+            <div class="description">
+                <div class="tab-description">
+                    <button class="tab-button active" onclick="showInfo()">Info</button>
+                    <button class="tab-button" onclick="showSynopsis()">Sinopsis</button>
+                </div>
+                <div id="info-description" class="info-description tab-content active">
+                    <p><strong>Rank:</strong> 7th, it has 15.3M views</p>
+                    <p><strong>Alternative:</strong> Return of the Blossoming Blade</p>
+                    <p><strong>Author(s):</strong> Biga</p>
+                    <p><strong>Artist(s):</strong> LICO</p>
+                    <p><strong>Genre(s):</strong> Action, Comedy, Fantasy, Manhwa, Project, Shounen</p>
+                    <p><strong>Type:</strong> Manhwa</p>
+                    <p><strong>Tag(s):</strong> Baca Return of the Mount Hua Sect, Komik Return of the Mount Hua Sect, Return of the Mount Hua Sect Bahasa Indonesia</p>
+                </div>
+
+                <div id="synopsis-description" class="synopsis-description tab-content">
+                    <p>Chung Myung Murid ke-13 dari Mount hua sect, salah satu dari 3 swordsman terkuat, “Plum Blossom Sword Saint”, Mengalahkan Chun Ma, yang membawa kehancuran pada dunia ini. setelah pertarungan tersebut, ia menghembuskan nafas terakhirnya di atas gunung tempat mount hua sect berada. dia terlahir kembali 100 tahun kemudian di dalam tubuh seorang anak kecil.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- description end -->
+
+    <!-- chapter list -->
+    <div class="chapter-container">
+        <div class="social-button">
+            <button class="facebook">facebook</button>
+            <button class="twitter">twitter</button>
+            <button class="discord">discord</button>
+            <button class="telegram">telegram</button>
+        </div>
+
+        <input type="text" class="search-chapter" id="chapterSearch" placeholder="Cari Chapter. Contoh: 01 atau 50">
+
+        <div class="chapter-list" id="chapterList">
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 10</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 09</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 08</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 07</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 06</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 05</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 04</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 03</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 02</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+            <div class="chapter-item" data-chapter="10">
+                <span>chapter 01</span>
+                <span>08 Oktober, 2023</span>
+            </div>
+        </div>
+    </div>
+    <!-- chapter list end -->
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <p>project a &copy;2024</p>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
