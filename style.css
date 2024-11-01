@@ -473,6 +473,7 @@ footer {
     text-align: center;
     font-size: 36px;
     padding-bottom: 20px;
+    color: var(--color-1);
 }
 
 .description {
@@ -530,7 +531,7 @@ footer {
 }
 
 .tab-content.active {
-    display: block;
+    display: block !important;
 }
 
 /* chapter list */

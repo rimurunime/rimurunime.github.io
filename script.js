@@ -96,27 +96,67 @@ function scrollToTopClick() {
 //     document.querySelectorAll('.tab-button')[1].classList.add('active');
 // }
 
+// function showInfo() {
+//     document.getElementById('info-description').classList.add('active');
+//     document.getElementById('synopsis-description').classList.remove('active');
+
+//     // Hapus kelas 'active' dari tombol aktif sebelumnya
+//     document.querySelector('.tab-button.active').classList.remove('active');
+
+//     // Tambahkan kelas 'active' pada tombol Info
+//     document.querySelectorAll('.tab-button')[0].classList.add('active');
+// }
+
+// function showSynopsis() {
+//     document.getElementById('synopsis-description').classList.add('active');
+//     document.getElementById('info-description').classList.remove('active');
+
+//     // Hapus kelas 'active' dari tombol aktif sebelumnya
+//     document.querySelector('.tab-button.active').classList.remove('active');
+
+//     // Tambahkan kelas 'active' pada tombol Sinopsis
+//     document.querySelectorAll('.tab-button')[1].classList.add('active');
+// }
+
+// 
 function showInfo() {
-    document.getElementById('info-description').classList.add('active');
-    document.getElementById('synopsis-description').classList.remove('active');
+    console.log("Info button clicked");
+    const infoDescription = document.getElementById('info-description');
+    const synopsisDescription = document.getElementById('synopsis-description');
+
+    infoDescription.classList.add('active');
+    synopsisDescription.classList.remove('active');
 
     // Hapus kelas 'active' dari tombol aktif sebelumnya
     document.querySelector('.tab-button.active').classList.remove('active');
-
-    // Tambahkan kelas 'active' pada tombol Info
+     // Tambahkan kelas 'active' pada tombol Info
     document.querySelectorAll('.tab-button')[0].classList.add('active');
+
+    // Forcing a style update
+    infoDescription.style.display = 'block';
+    synopsisDescription.style.display = 'none';
 }
 
 function showSynopsis() {
-    document.getElementById('synopsis-description').classList.add('active');
-    document.getElementById('info-description').classList.remove('active');
+    console.log("Synopsis button clicked");
+    const infoDescription = document.getElementById('info-description');
+    const synopsisDescription = document.getElementById('synopsis-description');
+
+    synopsisDescription.classList.add('active');
+    infoDescription.classList.remove('active');
 
     // Hapus kelas 'active' dari tombol aktif sebelumnya
     document.querySelector('.tab-button.active').classList.remove('active');
 
     // Tambahkan kelas 'active' pada tombol Sinopsis
     document.querySelectorAll('.tab-button')[1].classList.add('active');
+
+    // Forcing a style update
+    synopsisDescription.style.display = 'block';
+    infoDescription.style.display = 'none';
 }
+
+
 
 // search chapter
 // Select the search input and add an event listener
