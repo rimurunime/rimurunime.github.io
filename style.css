@@ -642,7 +642,7 @@ footer {
 
 
 
-
+/* 476px */
 @media screen and (max-width: 476px) {
     .container-new-update {
         max-width: 85vw;
@@ -686,5 +686,34 @@ footer {
 
     #scrollToTopId {
         right: 10px;
+    }
+
+    .container-description {
+        width: 90vw;
+        padding: 0;
+        /* background-color: red; */
+    }
+
+    .content-description {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .img-description {
+        margin: 0 auto;
+    }
+
+    .info-description {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chapter-container {
+        width: 90vw;
+    }
+
+    .social-button button {
+        padding: 4px 8px;
     }
 }
