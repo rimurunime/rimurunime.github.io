@@ -677,12 +677,12 @@ footer {
     padding: 20px;
 }
 
-.button-read button {
+.button-read-right button {
     padding: 8px 16px;
     background-color: var(--btn-bg);
     cursor: pointer;
-    border-radius: 5px;
     border: none;
+    border-radius: 5px;
 }
 
 .button-read button:hover {
@@ -720,13 +720,58 @@ footer {
     color: #eaeaea;
 }
 
-.tengah-test {
+.read {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* dropdown chapter */
+.button-read-left {
+    display: inline-block;
+    position: relative;
+}
+
+.button-read-left button {
+    padding: 8px 16px;
+    background-color: var(--btn-bg);
+    cursor: pointer;
+    border: none;
+}
+
+.dropdown-chapter {
+    display: none;
+    position: absolute;
+    background-color: var(--btn-bg);
+    min-width: 120px;
+    max-height: 200px;
+    overflow-y: scroll;
+    box-shadow: 0 1px 3px #1e293b;
+}
+
+.dropdown-chapter a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 16px;
+    color: black;
+}
+
+.dropdown-chapter a:hover {
+    background-color: var(--btn-hover);
+}
+.button-read-left:hover .dropdown-chapter {
+    display: block;
+}
+
+.button-read-left:hover .button-read-left button {
+    background-color: var(--btn-hover);
+}
+
+
+
 
 
 
@@ -808,5 +853,13 @@ footer {
 
     .social-button button {
         padding: 4px 8px;
+    }
+
+    .container-read {
+        width: 90vw;
+    }
+
+    .read {
+        max-width: 100vh;
     }
 }

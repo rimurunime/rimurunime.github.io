@@ -1,30 +1,3 @@
-// dark mode & light mode with text
-// document.addEventListener('DOMContentLoaded', function() {
-//     const toggleButton = document.getElementById('theme-switch');
-//     const body = document.body;
-
-//     const currentTheme = localStorage.getItem('theme');
-//     if(currentTheme) {
-//         body.classList.add(currentTheme);
-
-//         if(currentTheme === 'light-mode') {
-//             toggleButton.textContent = 'switch to dark mode';
-//         }
-//     }
-
-//     toggleButton.addEventListener('click', function() {
-//         body.classList.toggle('light-mode');
-
-//         if(body.classList.contains('light-mode')) {
-//             toggleButton.textContent = 'switch to dark mode';
-//             localStorage.setItem('theme', 'light-mode');
-//         } else {
-//             toggleButton.textContent = 'switch to light mode';
-//             localStorage.setItem('theme', 'dark-mode');
-//         }
-//     });
-// });
-
 // dark mode & light mode with icon
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('theme-switch');
@@ -80,43 +53,6 @@ document.addEventListener('DOMContentLoaded',function() {
 function scrollToTopClick() {
     window.scrollTo({ top: 0, behavior: 'smooth'});
 };
-
-// 
-// function showInfo() {
-//     document.getElementById('info-description').classList.add('active');
-//     document.getElementById('synopsis-description').classList.remove('active');
-//     document.querySelector('.tab-button .active').classList.remove('active');
-//     document.querySelectorAll('.tab-button')[0].classList.add('active');
-// }
-
-// function showSynopsis() {
-//     document.getElementById('synopsis-description').classList.add('active');
-//     document.getElementById('info-description').classList.remove('active');
-//     document.querySelector('.tab-button .active').classList.remove('active');
-//     document.querySelectorAll('.tab-button')[1].classList.add('active');
-// }
-
-// function showInfo() {
-//     document.getElementById('info-description').classList.add('active');
-//     document.getElementById('synopsis-description').classList.remove('active');
-
-//     // Hapus kelas 'active' dari tombol aktif sebelumnya
-//     document.querySelector('.tab-button.active').classList.remove('active');
-
-//     // Tambahkan kelas 'active' pada tombol Info
-//     document.querySelectorAll('.tab-button')[0].classList.add('active');
-// }
-
-// function showSynopsis() {
-//     document.getElementById('synopsis-description').classList.add('active');
-//     document.getElementById('info-description').classList.remove('active');
-
-//     // Hapus kelas 'active' dari tombol aktif sebelumnya
-//     document.querySelector('.tab-button.active').classList.remove('active');
-
-//     // Tambahkan kelas 'active' pada tombol Sinopsis
-//     document.querySelectorAll('.tab-button')[1].classList.add('active');
-// }
 
 // 
 function showInfo() {
