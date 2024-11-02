@@ -556,9 +556,10 @@ footer {
 
 .social-button {
     display: flex;
+    justify-content: center;
     gap: 5px;
     margin-bottom: 10px;
-    
+    padding: 20px;
 }
 
 .social-button button {
@@ -660,9 +661,72 @@ footer {
     font-style: italic;
 }
 
+/* container read */
+.container-read {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-1);
+    padding-top: 20px;
+    /* background-color: yellow; */
+}
+
+.button-read {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.button-read button {
+    padding: 8px 16px;
+    background-color: var(--btn-bg);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.button-read button:hover {
+    background-color: var(--btn-hover);
+}
+
+/* navigation root */
+.navigation-root {
+    background-color: var(--nav-bg);
+    padding: 15px;
+}
+
+.navigation-root ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navigation-root li {
+    list-style-type: none;
+}
 
 
+.navigation-root a {    
+    color: #eaeaea;
+}
 
+.navigation-root a:hover {
+    text-decoration: dashed;
+}
+
+.icon-navgation-root {
+    /* background-color: red; */
+    color: #eaeaea;
+}
+
+.tengah-test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 
 
