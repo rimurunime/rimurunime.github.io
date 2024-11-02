@@ -130,18 +130,24 @@ nav h2 a {
 }
 
 .card {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     width: 200px;
     text-align: left;
     overflow: hidden;
 }
 
+.card-content a {
+    color: var(--color-1);
+    text-decoration: none;
+}
+
 .card img {
     width: 100%;
-    height: auto;
+    height: 280px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    object-fit: cover;
 }
 
 .card img:hover {
@@ -159,6 +165,8 @@ nav h2 a {
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
+    white-space: normal; /* Mengizinkan teks untuk membungkus ke baris baru */
+    word-break: break-word; /* Memastikan kata-kata panjang bisa terpotong */
 }
 
 .card-content p {
@@ -652,6 +660,10 @@ footer {
     .card {
         width: 150px;
 
+    }
+
+    .card img {
+        height: 200px;
     }
 
     .card-content h2 {
