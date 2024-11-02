@@ -33,6 +33,7 @@ warna : #4f46e5 (tipe komik manhwa), #cbd5e1 (warna tulisan chapter), #94a3b8 (w
     --color-footer: #eaeaea;
     --bg-scroll-to-top: #1e293b;
     --color-scroll-to-top: #eaeaea;
+    --chapter-hover: #324154;
 }
 
 
@@ -464,6 +465,7 @@ footer {
     --color-3: #334155;
     --bg-scroll-to-top: #64748b;
     --color-scroll-to-top: #eaeaea;
+    --chapter-hover: #475569;
 }
 
 /* description home */
@@ -621,11 +623,20 @@ footer {
 }
 
 .chapter-list {
-    max-height: 230px; /* Adjust height for 5 chapters */
+    max-height: 300px; /* Adjust height for 5 chapters */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.chapter-list a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.chapter-list a:hover .chapter-item {
+    background-color: var(--chapter-hover);
 }
 
 .chapter-item {
@@ -641,7 +652,12 @@ footer {
 }
 
 .chapter-item:last-child {
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
+}
+
+.chapter-item span:last-child {
+    font-size: 13px;
+    font-style: italic;
 }
 
 
