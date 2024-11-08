@@ -262,6 +262,19 @@ hr {
     text-transform: capitalize;
 }
 
+.gallery-item a {
+    text-decoration: none;
+    color: green;
+}
+
+.gallery-item a img {
+    transition: 0.3s;
+}
+
+.gallery-item a img:hover {
+    transform: scale(1.08);
+}
+
 .gallery-item img {
     width: 100%;
     height: auto;
